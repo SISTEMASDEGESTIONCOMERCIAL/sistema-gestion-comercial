@@ -1,0 +1,8 @@
+flowchart TD
+    A([Inicio]) --> B[Construir ruta dentro de data]
+    B --> C{Archivo existe?}
+    C -- No --> D[Devolver estructura vacía] --> Z([Fin])
+    C -- Sí --> E[Leer y analizar JSON]
+    E --> F{JSON válido?}
+    F -- No --> G[Mostrar aviso y devolver estructura vacía] --> Z
+    F -- Sí --> H[Devolver datos] --> Z

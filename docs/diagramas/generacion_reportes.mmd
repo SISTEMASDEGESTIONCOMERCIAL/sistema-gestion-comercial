@@ -1,0 +1,8 @@
+flowchart TD
+    A([Inicio]) --> B[Leer productos, ventas y movimientos]
+    B --> C{Hay datos?}
+    C -- No --> D[Mostrar que no hay datos] --> Z([Fin])
+    C -- Sí --> E[Calcular ingresos y unidades por producto]
+    E --> F[Calcular stock bajo y valor del inventario]
+    F --> G[Calcular promedio por día con ventas]
+    G --> H[Mostrar reporte] --> Z

@@ -1,0 +1,10 @@
+flowchart TD
+    A([Inicio]) --> B[/Ingresar código y cantidad de entrada/]
+    B --> C{Producto activo existe?}
+    C -- No --> D[Mostrar error] --> Z([Fin])
+    C -- Sí --> E{Cantidad entera positiva?}
+    E -- No --> D
+    E -- Sí --> F[Sumar cantidad a existencias]
+    F --> G[Guardar productos]
+    G --> H[Registrar fecha, tipo, cantidad y descripción]
+    H --> I[Mostrar existencias actualizadas] --> Z

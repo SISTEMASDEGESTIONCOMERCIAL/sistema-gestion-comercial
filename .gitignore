@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+.vscode/
+# Los datos de ejemplo o de trabajo local pueden contener información comercial.
+# Mantener JSON reales fuera del repositorio salvo que el docente exija datos de prueba ficticios.
+data/*.json
+!data/.gitkeep

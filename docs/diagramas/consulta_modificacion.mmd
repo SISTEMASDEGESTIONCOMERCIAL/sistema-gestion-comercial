@@ -1,0 +1,11 @@
+flowchart TD
+    A([Inicio]) --> B[/Ingresar código/]
+    B --> C[Buscar producto]
+    C --> D{Existe?}
+    D -- No --> E[Mostrar producto no encontrado] --> Z([Fin])
+    D -- Sí --> F[Mostrar información actual]
+    F --> G[/Ingresar campos a modificar; vacío conserva valor/]
+    G --> H{Datos válidos?}
+    H -- No --> I[Mostrar error] --> Z
+    H -- Sí --> J[Guardar cambios]
+    J --> K[Confirmar actualización] --> Z

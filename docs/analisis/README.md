@@ -1,0 +1,1 @@
+El análisis de procesos está documentado en procesos.md. Los diagramas Mermaid están en ../diagramas/.

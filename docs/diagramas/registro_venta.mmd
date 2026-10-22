@@ -1,0 +1,19 @@
+flowchart TD
+    A([Inicio]) --> B[Leer productos activos]
+    B --> C{Hay existencias?}
+    C -- No --> X[Informar que no hay productos] --> Z([Fin])
+    C -- Sí --> D[/Elegir producto y cantidad/]
+    D --> E{Producto existe y cantidad positiva?}
+    E -- No --> D
+    E -- Sí --> F{Stock suficiente?}
+    F -- No --> D
+    F -- Sí --> G[Agregar línea al carrito]
+    G --> H{Agregar otro producto?}
+    H -- Sí --> D
+    H -- No --> I[Validar cliente opcional]
+    I --> J{Cliente válido?}
+    J -- No --> X
+    J -- Sí --> K[Calcular subtotal, IVA 12% y total]
+    K --> L[Guardar venta]
+    L --> M[Actualizar existencias y movimientos]
+    M --> N[Mostrar comprobante resumido] --> Z

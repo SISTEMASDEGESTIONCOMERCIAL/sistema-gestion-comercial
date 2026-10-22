@@ -1,0 +1,11 @@
+flowchart TD
+    A([Inicio]) --> B[/Ingresar datos del producto/]
+    B --> C{Campos obligatorios completos?}
+    C -- No --> D[Mostrar error] --> Z([Fin])
+    C -- Sí --> E{Código duplicado?}
+    E -- Sí --> D
+    E -- No --> F{Precio y cantidades válidos y no negativos?}
+    F -- No --> D
+    F -- Sí --> G[Guardar producto en JSON]
+    G --> H[Mostrar confirmación]
+    H --> Z

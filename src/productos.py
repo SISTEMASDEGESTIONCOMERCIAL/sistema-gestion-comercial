@@ -40,6 +40,12 @@ def registrar_producto():
                       "precio": precio, "cantidad": cantidad,
                       "stock_minimo": minimo, "activo": True})
     guardar_productos(productos)
+    if cantidad > 0:
+        from inventario import registrar_movimiento  # import local: evita dependencia circular
+        try:
+            registrar_movimiento(codigo, "ENTRADA", cantidad, "Existencia inicial")
+        except OSError as error:
+            print(f"El producto se guardó, pero no se registró el movimiento inicial: {error}")
     print("Producto registrado correctamente.")
 
 
@@ -104,15 +110,31 @@ def desactivar_producto():
     print("Producto desactivado; su historial se conserva.")
 
 
+def reactivar_producto():
+    productos = cargar_productos()
+    codigo = input("Código del producto a reactivar: ").strip()
+    producto = next((p for p in productos if str(p.get("codigo")) == codigo), None)
+    if not producto:
+        print("Producto no encontrado.")
+        return
+    if producto.get("activo", True):
+        print("El producto ya está activo.")
+        return
+    producto["activo"] = True
+    guardar_productos(productos)
+    print("Producto reactivado; ya puede venderse de nuevo.")
+
+
 def menu_productos():
     while True:
         print("\n===== GESTIÓN DE PRODUCTOS =====")
-        print("1. Registrar producto\n2. Consultar por código\n3. Listar productos\n4. Modificar producto\n5. Desactivar producto\n0. Volver")
+        print("1. Registrar producto\n2. Consultar por código\n3. Listar productos\n4. Modificar producto\n5. Desactivar producto\n6. Reactivar producto\n0. Volver")
         opcion = input("Seleccione una opción: ").strip()
         if opcion == "1": registrar_producto()
         elif opcion == "2": consultar_producto()
         elif opcion == "3": listar_productos()
         elif opcion == "4": modificar_producto()
         elif opcion == "5": desactivar_producto()
+        elif opcion == "6": reactivar_producto()
         elif opcion == "0": return
         else: print("Opción no válida.")

@@ -1,0 +1,14 @@
+[
+    {
+        "codigo": "C001",
+        "nombre": "Cliente de Ejemplo Uno",
+        "telefono": "",
+        "activo": true
+    },
+    {
+        "codigo": "C002",
+        "nombre": "Cliente de Ejemplo Dos",
+        "telefono": "",
+        "activo": true
+    }
+]

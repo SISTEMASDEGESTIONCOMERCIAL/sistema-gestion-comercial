@@ -1,1 +1,1 @@
-El análisis de procesos está documentado en procesos.md. Los diagramas Mermaid están en ../diagramas/.
+El análisis de procesos está en [procesos.md](procesos.md). Los diagramas (`.svg`, `.mmd`, `.dot`) están en [../diagramas/](../diagramas/).

@@ -63,7 +63,7 @@ def reporte_valor_inventario():
 
 def reporte_promedio_ventas():
     ventas = cargar_ventas()
-    print("\n--- PROMEDIO DE VENTAS POR DÍA ---")
+    print("\n--- PROMEDIO DE VENTAS POR PERÍODO (DÍA Y MES) ---")
     if not ventas:
         print("No hay ventas registradas.")
         return
@@ -80,6 +80,13 @@ def reporte_promedio_ventas():
         return
     promedio = sum(por_dia.values()) / len(por_dia)
     print(f"Días con ventas: {len(por_dia)} | Promedio diario: Q{promedio:.2f}")
+    por_mes = {}
+    for fecha, monto in por_dia.items():
+        por_mes[fecha[:7]] = por_mes.get(fecha[:7], 0.0) + monto
+    promedio_mes = sum(por_mes.values()) / len(por_mes)
+    print(f"Meses con ventas: {len(por_mes)} | Promedio mensual: Q{promedio_mes:.2f}")
+    for mes in sorted(por_mes):
+        print(f"   {mes}: Q{por_mes[mes]:.2f}")
 
 
 def reporte_general():
@@ -96,7 +103,7 @@ def reporte_general():
 def menu_reportes():
     while True:
         print("\n===== REPORTES Y ESTADÍSTICAS =====")
-        print("1. Listado general de productos\n2. Productos en stock mínimo o bajo\n3. Historial e ingresos por ventas\n4. Producto más vendido\n5. Valor del inventario\n6. Promedio diario de ventas\n7. Reporte general\n0. Volver")
+        print("1. Listado general de productos\n2. Productos en stock mínimo o bajo\n3. Historial e ingresos por ventas\n4. Producto más vendido\n5. Valor del inventario\n6. Promedio de ventas por período\n7. Reporte general\n0. Volver")
         opcion = input("Seleccione una opción: ").strip()
         acciones = {"1": reporte_productos, "2": reporte_stock_bajo, "3": reporte_ventas,
                     "4": reporte_producto_mas_vendido, "5": reporte_valor_inventario,

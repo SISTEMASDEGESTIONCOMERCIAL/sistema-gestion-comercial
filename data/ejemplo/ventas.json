@@ -1,0 +1,80 @@
+[
+    {
+        "numero": 1,
+        "fecha": "2026-10-05 10:15:00",
+        "codigo_cliente": "C001",
+        "cliente": "Cliente de Ejemplo Uno",
+        "subtotal": 70.0,
+        "iva": 8.4,
+        "total": 78.4,
+        "productos": [
+            {
+                "codigo_producto": "P001",
+                "producto": "Cuaderno rayado",
+                "cantidad": 4,
+                "precio_unitario": 12.5,
+                "subtotal": 50.0,
+                "iva": 6.0,
+                "total": 56.0
+            },
+            {
+                "codigo_producto": "P002",
+                "producto": "Lápiz HB",
+                "cantidad": 10,
+                "precio_unitario": 2.0,
+                "subtotal": 20.0,
+                "iva": 2.4,
+                "total": 22.4
+            }
+        ]
+    },
+    {
+        "numero": 2,
+        "fecha": "2026-10-05 15:40:00",
+        "codigo_cliente": "",
+        "cliente": "Venta general",
+        "subtotal": 20.25,
+        "iva": 2.43,
+        "total": 22.68,
+        "productos": [
+            {
+                "codigo_producto": "P003",
+                "producto": "Marcador negro",
+                "cantidad": 3,
+                "precio_unitario": 6.75,
+                "subtotal": 20.25,
+                "iva": 2.43,
+                "total": 22.68
+            }
+        ]
+    },
+    {
+        "numero": 3,
+        "fecha": "2026-11-02 09:05:00",
+        "codigo_cliente": "C002",
+        "cliente": "Cliente de Ejemplo Dos",
+        "subtotal": 185.0,
+        "iva": 22.2,
+        "total": 207.2,
+        "productos": [
+            {
+                "codigo_producto": "P001",
+                "producto": "Cuaderno rayado",
+                "cantidad": 6,
+                "precio_unitario": 12.5,
+                "subtotal": 75.0,
+                "iva": 9.0,
+                "total": 84.0
+            },
+            {
+                "codigo_producto": "P004",
+                "producto": "Calculadora básica",
+                "cantidad": 2,
+                "precio_unitario": 55.0,
+                "subtotal": 110.0,
+                "iva": 13.2,
+                "total": 123.2
+            }
+        ]
+    }
+]

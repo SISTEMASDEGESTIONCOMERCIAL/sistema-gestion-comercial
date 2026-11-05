@@ -28,6 +28,9 @@ En Windows también puede funcionar `py src/main.py`. No ejecute los módulos de
 - `src/archivos.py`: lectura y escritura JSON.
 - `src/estructuras.py`: validaciones y utilidades.
 
+## Datos de ejemplo
+La carpeta `data/ejemplo/` contiene datos ficticios para probar el sistema (ver `data/ejemplo/README.md`).
+
 ## Archivos de datos
 Los JSON se crean automáticamente dentro de `data/`: `productos.json`, `clientes.json`, `ventas.json` y `movimientos_inventario.json`. No borre esos archivos si necesita conservar los registros. Haga copias de seguridad antes de realizar cambios manuales.
 
@@ -37,6 +40,7 @@ Desde la carpeta raíz ejecute:
 ```bash
 python -m unittest discover -s tests -v
 ```
+Son 31 pruebas (validaciones, productos, ventas, inventario, reportes y menú); usan una carpeta temporal y no modifican `data/`. Los resultados documentados están en `docs/pruebas.md`.
 
 ## Estructura
 ```text

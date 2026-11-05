@@ -1,0 +1,65 @@
+[
+    {
+        "fecha": "2026-10-01 08:00:00",
+        "codigo_producto": "P001",
+        "tipo": "ENTRADA",
+        "cantidad": 50,
+        "descripcion": "Existencia inicial"
+    },
+    {
+        "fecha": "2026-10-01 08:00:00",
+        "codigo_producto": "P002",
+        "tipo": "ENTRADA",
+        "cantidad": 18,
+        "descripcion": "Existencia inicial"
+    },
+    {
+        "fecha": "2026-10-01 08:00:00",
+        "codigo_producto": "P003",
+        "tipo": "ENTRADA",
+        "cantidad": 28,
+        "descripcion": "Existencia inicial"
+    },
+    {
+        "fecha": "2026-10-01 08:00:00",
+        "codigo_producto": "P004",
+        "tipo": "ENTRADA",
+        "cantidad": 7,
+        "descripcion": "Existencia inicial"
+    },
+    {
+        "fecha": "2026-10-05 10:15:00",
+        "codigo_producto": "P001",
+        "tipo": "SALIDA",
+        "cantidad": 4,
+        "descripcion": "Venta #1"
+    },
+    {
+        "fecha": "2026-10-05 10:15:00",
+        "codigo_producto": "P002",
+        "tipo": "SALIDA",
+        "cantidad": 10,
+        "descripcion": "Venta #1"
+    },
+    {
+        "fecha": "2026-10-05 15:40:00",
+        "codigo_producto": "P003",
+        "tipo": "SALIDA",
+        "cantidad": 3,
+        "descripcion": "Venta #2"
+    },
+    {
+        "fecha": "2026-11-02 09:05:00",
+        "codigo_producto": "P001",
+        "tipo": "SALIDA",
+        "cantidad": 6,
+        "descripcion": "Venta #3"
+    },
+    {
+        "fecha": "2026-11-02 09:05:00",
+        "codigo_producto": "P004",
+        "tipo": "SALIDA",
+        "cantidad": 2,
+        "descripcion": "Venta #3"
+    }
+]
